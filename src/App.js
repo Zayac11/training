@@ -16,9 +16,9 @@ class App extends React.Component {
             <>
                 {/*<YupInputs />*/}
                 {/*<Hooks />*/}
-                {/*<Formik />*/}
+                <Formik />
 
-                <MapTest />
+                {/*<MapTest />*/}
             </>
         )
     }

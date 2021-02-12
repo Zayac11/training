@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Formik, Form, Field, ErrorMessage} from 'formik'
+import { Formik, Form, Field, ErrorMessage, FieldArray} from 'formik'
 import * as Yup from 'yup'
 import {compose} from "redux";
 import TextError from "../Common/TextError";
@@ -13,7 +13,8 @@ const SignupForm = () => {
             vk: '',
             inst: '',
         },
-        telephones: ['', '']
+        telephones: ['', ''],
+        phNumbers: [''],
     }
 
     const onSubmit = (values) => {
@@ -109,6 +110,35 @@ const SignupForm = () => {
                     <ErrorMessage name="telephones" component={TextError} />
                 </div>
 
+                <div>
+                    <label htmlFor="">List of phone numbers</label>
+                    <FieldArray name={'phNumbers'}>
+                        {
+                            (fieldArrayProps) => {
+                                const {push, remove, form} = fieldArrayProps
+                                const {values} = form
+                                const {phNumbers} = values
+                                return (
+                                    <div>
+                                        {
+                                            phNumbers.map((phNumber, index) => (
+                                                <div key={index}>
+                                                    <Field name={`phNumbers[${index}]`} />
+                                                    {
+                                                        index > 0 &&
+                                                        <button type={'button'} onClick={() => remove(index)}> - </button>
+                                                    }
+                                                    <button type={'button'} onClick={() => push('')}> + </button>
+                                                </div>
+                                            ))
+                                        }
+                                    </div>
+                                )
+                            }
+                        }
+                    </FieldArray>
+                </div>
+
                 {/*type="submit у кнопки это важно, иначе warning будет!"*/}
                 <button type="submit">Submit</button>
             </Form>
@@ -119,6 +149,11 @@ const SignupForm = () => {
 export default compose(
 
 )(SignupForm)
+
+//Проверять телефон можно с помощью регулярки
+// const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
+//
+// phoneNumber: Yup.string().matches(phoneRegExp, 'Phone number is not valid')
 
     // let validate = values => {
     //
