@@ -2,7 +2,9 @@ import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {setToken} from "../redux/test-reducer";
 import {compose} from "redux";
-import {withRouter} from "react-router";
+import {withRouter} from "react-router-dom";
+import {FormTest} from "../hoc/FormTest";
+import Formik from "./Formik";
 
 const Hooks = (props) => {
 
@@ -14,20 +16,21 @@ const Hooks = (props) => {
 
         console.log(props.history)
     });
-
-    function handle() {
-        dispatch(setToken())
+    const onSubmit = (values) => {
+        debugger
+        console.log(values)
     }
-
     return (
         <div>
-            {message}
+            {/*{message}*/}
 
-            <button onClick={() => setCount(count+1)}>Нажать</button>
+            {/*<button onClick={() => setCount(count+1)}>Нажать</button>*/}
 
-            <div>
-                Я нажал {count} раз
-            </div>
+            {/*<div>*/}
+            {/*    Я нажал {count} раз*/}
+            {/*</div>*/}
+
+            <Formik {...props} onSubmit={onSubmit} />
 
         </div>
     )
@@ -35,4 +38,5 @@ const Hooks = (props) => {
 
 export default compose(
     withRouter,
+    FormTest,
 )(Hooks)

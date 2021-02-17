@@ -4,46 +4,46 @@ import * as Yup from 'yup'
 import {compose} from "redux";
 import TextError from "../Common/TextError";
 
-const SignupForm = () => {
+const SignupForm = (props) => {
 
-    const initialValues = {
-        name: '',
-        email: '',
-        social: {
-            vk: '',
-            inst: '',
-        },
-        telephones: ['', ''],
-        phNumbers: [''],
-    }
-
-    const onSubmit = (values) => {
-        console.log(values)
-    }
-
-    let validationSchema = Yup.object({
-        name: Yup.string()
-            .max(15, '15 символов или меньше youpta')
-            .required('Имя Required bitch'),
-
-        email: Yup.string()
-            .email('Адрес гавно polnoe')
-            .required('address Required'),
-        social: Yup.object({
-            vk: Yup.string()
-                .required('vk Required bitch'),
-            inst: Yup.string()
-                .required('inst Required bitch'),
-        }),
-        telephones: Yup.array()
-            .of(Yup.string()
-                .required('Текст чи шо'))
-    })
-
+    // const initialValues = {
+    //     name: '',
+    //     email: '',
+    //     social: {
+    //         vk: '',
+    //         inst: '',
+    //     },
+    //     telephones: ['', ''],
+    //     phNumbers: [''],
+    // }
+    //
+    // const onSubmit = (values) => {
+    //     console.log(values)
+    // }
+    //
+    // let validationSchema = Yup.object({
+    //     name: Yup.string()
+    //         .max(15, '15 символов или меньше youpta')
+    //         .required('Имя Required bitch'),
+    //
+    //     email: Yup.string()
+    //         .email('Адрес гавно polnoe')
+    //         .required('address Required'),
+    //     social: Yup.object({
+    //         vk: Yup.string()
+    //             .required('vk Required bitch'),
+    //         inst: Yup.string()
+    //             .required('inst Required bitch'),
+    //     }),
+    //     telephones: Yup.array()
+    //         .of(Yup.string()
+    //             .required('Текст чи шо'))
+    // })
+    debugger
     return (
-        <Formik initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={onSubmit}
+        <Formik initialValues={props.initialValues}
+                validationSchema={props.validationSchema}
+                onSubmit={props.onSubmit}
         >
             <Form>
                 <div>
