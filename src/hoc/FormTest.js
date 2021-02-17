@@ -17,7 +17,15 @@ export const FormTest = (Component) => {
             super(props);
 
             this.state = {
-
+                name: '',
+                email: '',
+                address: '',
+                social: {
+                    vk: '',
+                    inst: '',
+                },
+                telephones: ['', ''],
+                phNumbers: [''],
             }
         }
 
@@ -36,6 +44,12 @@ export const FormTest = (Component) => {
                 phNumbers: [''],
             }
 
+            const setState = (props) => {
+                initialValues.name = props.name
+                initialValues.email = 'asasdsda@mail.ru'
+                initialValues.address = 'asdjkasd'
+            }
+
             let validationSchema = Yup.object({
                 name: Yup.string()
                     .max(15, '15 символов или меньше youpta'),
@@ -48,21 +62,21 @@ export const FormTest = (Component) => {
                     .max(15, '15 символов или меньше address'),
                     // .required('address Required'),
                 social: Yup.object({
-                    vk: Yup.string()
-                        .required('vk Required bitch'),
-                    inst: Yup.string()
-                        .required('inst Required bitch'),
+                    vk: Yup.string(),
+                        // .required('vk Required bitch'),
+                    inst: Yup.string(),
+                        // .required('inst Required bitch'),
                 }),
                 telephones: Yup.array()
                     .of(Yup.string()
-                        .required('Текст чи шо'))
+                        // .required('Текст чи шо')
+                )
             })
-
             return (
                 <>
                     <Component {...this.props}
-                               {...this.state}
                                initialValues={initialValues}
+                               setState={setState}
                                validationSchema={validationSchema}
                     />
                 </>
@@ -71,7 +85,6 @@ export const FormTest = (Component) => {
 
 
     }
-
 
 let ConnectedCommonFormTestComponent = connect(mapStateToPropsForRedirect)(FormTest);
 

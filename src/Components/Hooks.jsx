@@ -13,11 +13,18 @@ const Hooks = (props) => {
     const message = useSelector(state => state.test.message);
 
     useEffect(() => {
+        props.setState({
+            name: 'hisik',
+            address: 'asd',
+            email: 'as@as.ru',
+        })
+    }, []);
+
+    useEffect(() => {
 
         console.log(props.history)
     });
     const onSubmit = (values) => {
-        debugger
         console.log(values)
     }
     return (
