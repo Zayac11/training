@@ -1,0 +1,16 @@
+$myColor: blue;
+@mixin flexible () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.test {
+        color: $myColor;
+
+    }
+
+.elements {
+  @include flexible ();
+  width: max-content;
+}

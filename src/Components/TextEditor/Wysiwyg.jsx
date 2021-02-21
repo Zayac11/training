@@ -1,7 +1,6 @@
 import React from 'react';
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, convertToRaw, convertFromRaw, ContentState } from 'draft-js';
-
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 const content = {
@@ -31,8 +30,9 @@ class Wysiwyg extends React.Component {
 
     constructor(props) {
         super(props);
-        const contentState = convertFromRaw(content);
-        const editorState = EditorState.createWithContent(contentState);
+        const contentState = content;
+        const editorState = EditorState.createWithContent(convertFromRaw(content));
+
         this.state = {
             editorState,
             contentState,
@@ -63,15 +63,15 @@ class Wysiwyg extends React.Component {
 
     render() {
         const { editorState } = this.state;
+
         return (
             <>
                 <Editor
-                    initialContentState={content}
                     editorState={editorState}
                     readOnly = {this.state.readOnly}
                     toolbarHidden = {this.state.readOnly}
-                    wrapperClassName="demo-wrapper"
-                    editorClassName="demo-editor"
+                    // wrapperClassName="demo-wrapper"
+                    // editorClassName="demo-editor"
                     onContentStateChange={this.onContentStateChange}
                     onEditorStateChange={this.onEditorStateChange}
                 />
