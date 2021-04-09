@@ -1,0 +1,32 @@
+.container {
+  padding: 30px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.searchItem {
+  cursor: pointer;
+}
+
+.tagContainer {
+  margin-top: 30px;
+}
+
+.tag {
+  margin-right: 10px;
+  color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  padding: 3px 10px;
+  border-radius: 25px;
+  cursor: default;
+}
+.tagItem {
+  margin-right: 5px;
+}
+
+.tagBtn {
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

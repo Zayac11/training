@@ -7,6 +7,7 @@ import Wysiwyg from "./Components/TextEditor/Wysiwyg";
 import Test from "./Components/Test";
 import SignupForm from "./Components/Formik";
 import Print from "./Components/Print/Print";
+import Search from "./Components/Search/Search";
 
 class App extends React.Component {
 
@@ -24,7 +25,8 @@ class App extends React.Component {
                 {/*<Wysiwyg />*/}
                 {/*<Test />*/}
                 {/*<MapTest />*/}
-                <Print />
+                {/*<Print />*/}
+                <Search />
             </>
         )
     }
