@@ -54,24 +54,29 @@ const Search = (props) => {
     };
 
     const [searchList, setSearchList] = useState(array) //Массив совпадений
-
+    let textHighlighter;
     return (
         <div className={s.container}>
             <input type="text" value={searchValue} onChange={(e) => handleChangeValue(e.target.value)} />
-            {/*<SearchField*/}
-            {/*    placeholder="Search..."*/}
-            {/*    onChange={handleChange}*/}
-            {/*    classNames="test-class"*/}
-            {/*/>*/}
-
             <div>
                 {
                     // searchValue.length > 0 &&
                     searchList.map((search, index) => {
+                        //Выделение символов
+                        let searchKeywordIdx = search.indexOf(searchValue);
+                        if (searchKeywordIdx > -1) {
+                            textHighlighter = [
+                                search.substring(0, searchKeywordIdx),
+                                <span style={{color: '#FFC618'}} key={index}>
+                                    {search.substring(searchKeywordIdx, searchKeywordIdx + searchValue.length)}
+                                </span>,
+                                search.substring(searchKeywordIdx + searchValue.length)
+                            ];
+                        }
                         return (
                             <div className={s.searchItem} onClick={() => handleDeleteItem(search, array)}>
                                 <span>
-                                    {search}
+                                    {textHighlighter}
                                 </span>
                             </div>
                         )
