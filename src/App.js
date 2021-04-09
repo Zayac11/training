@@ -2,10 +2,11 @@ import React from 'react'
 import './App.css';
 import YupInputs from "./Components/YupInputs";
 import Hooks from "./Components/Hooks";
-import Formik from "./Components/Formik";
 import MapTest from "./Components/MapTest/MapTest";
 import Wysiwyg from "./Components/TextEditor/Wysiwyg";
 import Test from "./Components/Test";
+import SignupForm from "./Components/Formik";
+import Print from "./Components/Print/Print";
 
 class App extends React.Component {
 
@@ -18,11 +19,12 @@ class App extends React.Component {
             <>
                 {/*<YupInputs />*/}
                 {/*<Hooks />*/}
-                {/*<Formik />*/}
+                {/*<SignupForm />*/}
                 {/*<TextEditor />*/}
-                <Wysiwyg />
+                {/*<Wysiwyg />*/}
                 {/*<Test />*/}
                 {/*<MapTest />*/}
+                <Print />
             </>
         )
     }

@@ -10,9 +10,9 @@ const MapTest = (props) => {
         <div>
             <YMaps>
                 <div>
-                    {/*map чи шо*/}
                     <Map className={s.map}
                         defaultState={{ center: [55.75, 37.57], zoom: 16 }} >
+                        {/*center: [55.751574, 37.573856]*/}
                         <Placemark defaultGeometry={[55.75, 37.58]}
                                    defaultProperties={{iconCaption: 'Стадион тут'
                                    }}

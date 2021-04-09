@@ -1,16 +1,25 @@
 import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage, FieldArray} from 'formik'
-import * as Yup from 'yup'
 import {compose} from "redux";
 import TextError from "../Common/TextError";
+import {FormTest} from "../hoc/FormTest";
+import {useSelector} from "react-redux";
 
 const SignupForm = (props) => {
 
+    const isEmailTaken = useSelector(state => state.test.isEmailTaken);
 
     return (
         <Formik initialValues={props.initialValues}
                 validationSchema={props.validationSchema}
                 onSubmit={props.onSubmit}
+                validate={values => {
+                    let errors = {}
+                    if(isEmailTaken) {
+                        errors.email = 'Email is Already taken'
+                    }
+                    return errors;
+                }}
                 enableReinitialize
         >
             <Form>
@@ -79,7 +88,7 @@ const SignupForm = (props) => {
                 </div>
 
                 <div>
-                    <label htmlFor="">List of phone numbers</label>
+                    <label htmlFor="phNumbers">List of phone numbers</label>
                     <FieldArray name={'phNumbers'}>
                         {
                             (fieldArrayProps) => {

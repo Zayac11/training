@@ -63,7 +63,7 @@ class Wysiwyg extends React.Component {
 
     render() {
         const { editorState } = this.state;
-
+        debugger
         return (
             <>
                 <Editor

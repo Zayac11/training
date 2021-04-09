@@ -44,6 +44,8 @@ const Hooks = (props) => {
 
             <Formik {...props} onSubmit={onSubmit} />
 
+            {/*<input type="date" onChange={(e) => console.log(e.target.value)}/>*/}
+
         </div>
     )
 }

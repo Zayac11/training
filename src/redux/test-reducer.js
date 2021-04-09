@@ -16,7 +16,10 @@ let initialState = {
           name: 'Oleg', age: 30, email: 'oleg@mail.ru', website: 'vk.com'
         },
     ],
-    message: 'Это хуки, чекай'
+    message: 'Это хуки, чекай',
+
+    isEmailTaken: true,
+
 }
 
 const testReducer = (state = initialState, action) => {

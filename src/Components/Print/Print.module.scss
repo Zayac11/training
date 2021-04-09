@@ -1,0 +1,16 @@
+.container {
+    background-color: deepskyblue;
+}
+
+.print {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+   .print {
+@media print {
+     width: 210mm;
+     height: 300mm;
+   }
+}
