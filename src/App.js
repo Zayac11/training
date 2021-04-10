@@ -8,6 +8,7 @@ import Test from "./Components/Test";
 import SignupForm from "./Components/Formik";
 import Print from "./Components/Print/Print";
 import Search from "./Components/Search/Search";
+import CameraPhoto from "./Components/CameraPhoto/CameraPhoto";
 
 class App extends React.Component {
 
@@ -26,7 +27,8 @@ class App extends React.Component {
                 {/*<Test />*/}
                 {/*<MapTest />*/}
                 {/*<Print />*/}
-                <Search />
+                <CameraPhoto />
+                {/*<Search />*/}
             </>
         )
     }
