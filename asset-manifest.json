@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/training/static/css/main.a928fe6a.chunk.css",
-    "main.js": "/training/static/js/main.13c69949.chunk.js",
-    "main.js.map": "/training/static/js/main.13c69949.chunk.js.map",
-    "runtime-main.js": "/training/static/js/runtime-main.5557676c.js",
-    "runtime-main.js.map": "/training/static/js/runtime-main.5557676c.js.map",
+    "main.css": "/training/static/css/main.ffed2d69.chunk.css",
+    "main.js": "/training/static/js/main.ef80d3a8.chunk.js",
+    "main.js.map": "/training/static/js/main.ef80d3a8.chunk.js.map",
+    "runtime-main.js": "/training/static/js/runtime-main.b2ad6af8.js",
+    "runtime-main.js.map": "/training/static/js/runtime-main.b2ad6af8.js.map",
     "static/css/2.624b9c66.chunk.css": "/training/static/css/2.624b9c66.chunk.css",
-    "static/js/2.3d35b9e3.chunk.js": "/training/static/js/2.3d35b9e3.chunk.js",
-    "static/js/2.3d35b9e3.chunk.js.map": "/training/static/js/2.3d35b9e3.chunk.js.map",
-    "static/js/3.228177e9.chunk.js": "/training/static/js/3.228177e9.chunk.js",
-    "static/js/3.228177e9.chunk.js.map": "/training/static/js/3.228177e9.chunk.js.map",
+    "static/js/2.aeb957e0.chunk.js": "/training/static/js/2.aeb957e0.chunk.js",
+    "static/js/2.aeb957e0.chunk.js.map": "/training/static/js/2.aeb957e0.chunk.js.map",
+    "static/js/3.9f9e454b.chunk.js": "/training/static/js/3.9f9e454b.chunk.js",
+    "static/js/3.9f9e454b.chunk.js.map": "/training/static/js/3.9f9e454b.chunk.js.map",
     "index.html": "/training/index.html",
     "static/css/2.624b9c66.chunk.css.map": "/training/static/css/2.624b9c66.chunk.css.map",
-    "static/css/main.a928fe6a.chunk.css.map": "/training/static/css/main.a928fe6a.chunk.css.map",
-    "static/js/2.3d35b9e3.chunk.js.LICENSE.txt": "/training/static/js/2.3d35b9e3.chunk.js.LICENSE.txt"
+    "static/css/main.ffed2d69.chunk.css.map": "/training/static/css/main.ffed2d69.chunk.css.map",
+    "static/js/2.aeb957e0.chunk.js.LICENSE.txt": "/training/static/js/2.aeb957e0.chunk.js.LICENSE.txt",
+    "static/media/top7_a17048084f8ba42e2be96a5fcf120fe8.963d4418.jpg": "/training/static/media/top7_a17048084f8ba42e2be96a5fcf120fe8.963d4418.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5557676c.js",
+    "static/js/runtime-main.b2ad6af8.js",
     "static/css/2.624b9c66.chunk.css",
-    "static/js/2.3d35b9e3.chunk.js",
-    "static/css/main.a928fe6a.chunk.css",
-    "static/js/main.13c69949.chunk.js"
+    "static/js/2.aeb957e0.chunk.js",
+    "static/css/main.ffed2d69.chunk.css",
+    "static/js/main.ef80d3a8.chunk.js"
   ]
 }
