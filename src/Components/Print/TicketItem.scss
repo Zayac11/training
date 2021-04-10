@@ -1,0 +1,143 @@
+.ticketItem {
+    display: grid;
+    grid-gap: 20px;
+    text-align: center;
+
+    &__large {
+        grid-template-columns: 1fr;
+        @media print {
+            grid-gap: 0;
+        }
+    }
+
+    &__medium {
+        grid-template-columns: 1fr 1fr;
+        @media print {
+            grid-gap: 0;
+        }
+    }
+
+    &__small {
+        grid-template-columns: 1fr 1fr;
+        @media print {
+            grid-gap: 0;
+        }
+    }
+
+    &__ticketLayout {
+        border: 1px solid black;
+        background-color: green;
+
+        @media print {
+            border: none
+        }
+        &__title {
+            font-weight: 500;
+        }
+
+        &__img {
+            display: block;
+
+            &__large {
+                //height: 500px;
+            }
+
+            &__medium {
+                //height: 250px;
+            }
+
+            &__small {
+                //height: 100px;
+            }
+        }
+
+        &__large {
+            height: 500px;
+            @media print {
+                height: 297mm;
+            }
+        }
+
+        &__medium {
+            height: 400px;
+            @media print {
+                height: 148.44mm;
+                border: 1mm solid black;
+            }
+            &:nth-child(even) {
+                @media print {
+                    border-right: none;
+                }
+            }
+            &:nth-child(odd) {
+                @media print {
+                    border-left: none;
+                }
+            }
+            &:nth-child(4n+1) {
+                @media print {
+                    border-top: none;
+                }
+            }
+            &:nth-child(4n+2) {
+                @media print {
+                    border-top: none;
+                }
+            }
+            &:nth-child(4n+3) {
+                @media print {
+                    border-bottom: none;
+                }
+            }
+            &:nth-child(4n+4) {
+                @media print {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        &__small {
+            height: 250px;
+            @media print {
+                height: 74.218mm;
+                border: 1mm solid black;
+            }
+            &:nth-child(even) {
+                @media print {
+                    border-right: none;
+                }
+            }
+            &:nth-child(odd) {
+                @media print {
+                    border-left: none;
+                }
+            }
+            &:nth-child(8n+1) {
+                @media print {
+                    border-top: none;
+                }
+            }
+            &:nth-child(8n+2) {
+                @media print {
+                    border-top: none;
+                }
+            }
+            &:nth-child(2) {
+                @media print {
+                    border-top: none;
+                }
+            }
+            &:nth-child(8n+7) {
+                @media print {
+                    border-bottom: none;
+                }
+            }
+            &:nth-child(8n+8) {
+                @media print {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+

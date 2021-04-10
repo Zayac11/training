@@ -27,8 +27,8 @@ class App extends React.Component {
                 {/*<Wysiwyg />*/}
                 {/*<Test />*/}
                 {/*<MapTest />*/}
-                {/*<Print />*/}
-                <CameraPhoto />
+                <Print />
+                {/*<CameraPhoto />*/}
                 {/*<Search />*/}
                 {/*<QrScanner />*/}
             </>
