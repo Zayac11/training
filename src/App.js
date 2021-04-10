@@ -9,6 +9,7 @@ import SignupForm from "./Components/Formik";
 import Print from "./Components/Print/Print";
 import Search from "./Components/Search/Search";
 import CameraPhoto from "./Components/CameraPhoto/CameraPhoto";
+import QrScanner from "./Components/QrScanner/QrScanner";
 
 class App extends React.Component {
 
@@ -27,8 +28,9 @@ class App extends React.Component {
                 {/*<Test />*/}
                 {/*<MapTest />*/}
                 {/*<Print />*/}
-                <CameraPhoto />
+                {/*<CameraPhoto />*/}
                 {/*<Search />*/}
+                <QrScanner />
             </>
         )
     }
