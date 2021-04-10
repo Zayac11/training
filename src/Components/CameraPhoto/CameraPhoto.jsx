@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import 'react-html5-camera-photo/build/css/index.css';
-import Camera from 'react-html5-camera-photo';
+import Camera, {FACING_MODES} from 'react-html5-camera-photo';
 
 const CameraPhoto = (props) => {
 
@@ -14,6 +14,8 @@ const CameraPhoto = (props) => {
     return (
         <>
             <Camera
+                idealFacingMode = {FACING_MODES.ENVIRONMENT}
+                isFullscreen = {false}
                 onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
             />
             {
