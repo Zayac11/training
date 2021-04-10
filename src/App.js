@@ -28,9 +28,9 @@ class App extends React.Component {
                 {/*<Test />*/}
                 {/*<MapTest />*/}
                 {/*<Print />*/}
-                {/*<CameraPhoto />*/}
+                <CameraPhoto />
                 {/*<Search />*/}
-                <QrScanner />
+                {/*<QrScanner />*/}
             </>
         )
     }

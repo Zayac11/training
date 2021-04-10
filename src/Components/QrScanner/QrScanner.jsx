@@ -8,6 +8,7 @@ const config = {
     fps:10,
     qrBox:250,
     disableFlip: false,
+    // facingMode: { exact: "environment" },
 }
 
 
@@ -22,23 +23,17 @@ class QrScanner extends React.Component {
 
     componentDidMount() {
         // Creates the configuration object for Html5QrcodeScanner.
-
         // Success callback is required.
         if (!(this.qrCodeSuccessCallback )) {
             throw 'qrCodeSuccessCallback is required callback.';
         }
 
         this.html5QrcodeScanner = new Html5QrcodeScanner(
-            'qr-code-full-region', config, true);
+            'qr-code-full-region', config, false);
+
         this.html5QrcodeScanner.render(
             this.qrCodeSuccessCallback, this.qrCodeErrorCallback);
     }
-
-    // componentWillUnmount() {
-    //     this.html5QrcodeScanner.clear().catch(error => {
-    //         console.error('Failed to clear html5QrcodeScanner. ', error);
-    //     });
-    // }
 
     render() {
         return (
