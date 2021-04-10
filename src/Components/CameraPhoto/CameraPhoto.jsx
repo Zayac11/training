@@ -11,11 +11,13 @@ const CameraPhoto = (props) => {
         console.log('takePhoto');
     }
 
+    console.log(FACING_MODES.ENVIRONMENT)
     return (
         <>
             <Camera
                 idealFacingMode = {FACING_MODES.ENVIRONMENT}
                 isFullscreen = {false}
+                isImageMirror={false}
                 onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
             />
             {
