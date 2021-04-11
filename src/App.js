@@ -10,6 +10,7 @@ import Print from "./Components/Print/Print";
 import Search from "./Components/Search/Search";
 import CameraPhoto from "./Components/CameraPhoto/CameraPhoto";
 import QrScanner from "./Components/QrScanner/QrScanner";
+import QrGenerator from "./Components/QrGenerator/QrGenerator";
 
 class App extends React.Component {
 
@@ -27,7 +28,8 @@ class App extends React.Component {
                 {/*<Wysiwyg />*/}
                 {/*<Test />*/}
                 {/*<MapTest />*/}
-                <Print />
+                {/*<Print />*/}
+                <QrGenerator />
                 {/*<CameraPhoto />*/}
                 {/*<Search />*/}
                 {/*<QrScanner />*/}
