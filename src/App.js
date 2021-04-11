@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+// import './Common/style.scss'
 import YupInputs from "./Components/YupInputs";
 import Hooks from "./Components/Hooks";
 import MapTest from "./Components/MapTest/MapTest";
