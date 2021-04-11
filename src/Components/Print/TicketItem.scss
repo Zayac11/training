@@ -54,6 +54,7 @@
         &__large {
             height: 500px;
             @media print {
+                width: 792px;
                 height: 1122px; //chrome
                 //height: 297mm;
             }
@@ -62,6 +63,7 @@
         &__medium {
             height: 400px;
             @media print {
+                width: 396px;
                 //height: 148.435mm;
                 //border: 1mm solid black;
                 height: 561px;
@@ -102,6 +104,7 @@
         &__small {
             height: 250px;
             @media print {
+                width: 396px;
                 //height: 74.218mm;
                 //border: 1mm solid black;
                 height: 280.5px;
