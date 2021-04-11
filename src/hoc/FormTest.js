@@ -52,11 +52,11 @@ export const FormTest = (Component) => {
 
             let validationSchema = Yup.object({
                 name: Yup.string()
-                    .max(15, '15 символов или меньше youpta'),
+                    .max(15, '15 символов или меньше'),
                     // .required('Имя Required bitch'),
 
                 email: Yup.string()
-                    .email('Адрес гавно polnoe'),
+                    .email('Адрес'),
                     // .required('address Required'),
                 address: Yup.string() //для примера, что без required всё работает
                     .max(15, '15 символов или меньше address'),

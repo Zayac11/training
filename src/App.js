@@ -11,6 +11,7 @@ import Search from "./Components/Search/Search";
 import CameraPhoto from "./Components/CameraPhoto/CameraPhoto";
 import QrScanner from "./Components/QrScanner/QrScanner";
 import QrGenerator from "./Components/QrGenerator/QrGenerator";
+import InputForm from "./Components/Input/InputForm";
 
 class App extends React.Component {
 
@@ -29,7 +30,8 @@ class App extends React.Component {
                 {/*<Test />*/}
                 {/*<MapTest />*/}
                 {/*<Print />*/}
-                <QrGenerator />
+                {/*<QrGenerator />*/}
+                <InputForm />
                 {/*<CameraPhoto />*/}
                 {/*<Search />*/}
                 {/*<QrScanner />*/}

@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { Formik, Form, Field, ErrorMessage, FieldArray} from 'formik'
 import {compose} from "redux";
 import TextError from "../Common/TextError";
-import {FormTest} from "../hoc/FormTest";
 import {useSelector} from "react-redux";
 
 const SignupForm = (props) => {
