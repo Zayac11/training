@@ -54,15 +54,18 @@
         &__large {
             height: 500px;
             @media print {
-                height: 297mm;
+                height: 1122px; //chrome
+                //height: 297mm;
             }
         }
 
         &__medium {
             height: 400px;
             @media print {
-                height: 148.44mm;
-                border: 1mm solid black;
+                //height: 148.435mm;
+                //border: 1mm solid black;
+                height: 561px;
+                border: 2px solid black;
             }
             &:nth-child(even) {
                 @media print {
@@ -99,8 +102,10 @@
         &__small {
             height: 250px;
             @media print {
-                height: 74.218mm;
-                border: 1mm solid black;
+                //height: 74.218mm;
+                //border: 1mm solid black;
+                height: 280.5px;
+                border: 2px solid black;
             }
             &:nth-child(even) {
                 @media print {
