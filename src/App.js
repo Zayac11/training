@@ -18,6 +18,7 @@ import QrGenerator from "./Components/QrGenerator/QrGenerator";
 import InputForm from "./Components/Input/InputForm";
 import PhotoGallery from "./Components/PhotoGallery/PhotoGallery";
 import Dnd from "./Components/Dnd/Dnd";
+import BeautifulDnd from "./Components/BeautifulDnd/BeautifulDnd";
 
 class App extends React.Component {
 
@@ -38,9 +39,13 @@ class App extends React.Component {
                 {/*<Print />*/}
                 {/*<QrGenerator />*/}
                 {/*<InputForm />*/}
-                <DndProvider backend={ isMobile ? TouchBackend : HTML5Backend}>
-                    <Dnd />
-                </DndProvider>
+
+                {/*<DndProvider backend={ isMobile ? TouchBackend : HTML5Backend}>*/}
+                {/*    <Dnd />*/}
+                {/*</DndProvider>*/}
+
+                <BeautifulDnd />
+
                 {/*<PhotoGallery />*/}
                 {/*<CameraPhoto />*/}
                 {/*<Search />*/}
@@ -51,4 +56,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default App
