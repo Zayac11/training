@@ -7,6 +7,7 @@ import {Card} from "./Card/Card";
 const style = {
     width: 400,
 };
+
 const ITEMS = [
     {title: 'Блок 1', id: 1},
     {title: 'Блок 2', id: 2},
@@ -21,6 +22,7 @@ const ItemTypes = {
 
 const Dnd = memo(function Container() {
     const [cards, setCards] = useState(ITEMS);
+
     const findCard = useCallback((id) => {
         const card = cards.filter((c) => `${c.id}` === id)[0];
         return {
@@ -28,6 +30,7 @@ const Dnd = memo(function Container() {
             index: cards.indexOf(card),
         };
     }, [cards]);
+
     const moveCard = useCallback((id, atIndex) => {
         const { card, index } = findCard(id);
         setCards(update(cards, {
@@ -37,9 +40,15 @@ const Dnd = memo(function Container() {
             ],
         }));
     }, [findCard, cards, setCards]);
+
     const [, drop] = useDrop(() => ({ accept: ItemTypes.CARD }));
-    return (<div ref={drop} style={style}>
-        {cards.map((card) => (<Card key={card.id} id={`${card.id}`} title={card.title} moveCard={moveCard} findCard={findCard}/>))}
-    </div>);
+
+    return (
+        <div ref={drop} style={style}>
+            {cards.map((card) =>
+                (<Card key={card.id} id={`${card.id}`} title={card.title} moveCard={moveCard} findCard={findCard}/>)
+            )}
+        </div>
+    );
 });
 export default Dnd

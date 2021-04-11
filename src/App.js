@@ -1,7 +1,9 @@
 import React from 'react'
 import './App.css';
 import {DndProvider} from "react-dnd";
+import {isMobile} from "react-device-detect";
 import { HTML5Backend } from 'react-dnd-html5-backend'
+import { TouchBackend } from 'react-dnd-touch-backend'
 import YupInputs from "./Components/YupInputs";
 import Hooks from "./Components/Hooks";
 import MapTest from "./Components/MapTest/MapTest";
@@ -36,7 +38,7 @@ class App extends React.Component {
                 {/*<Print />*/}
                 {/*<QrGenerator />*/}
                 {/*<InputForm />*/}
-                <DndProvider backend={HTML5Backend}>
+                <DndProvider backend={ isMobile ? TouchBackend : HTML5Backend}>
                     <Dnd />
                 </DndProvider>
                 {/*<PhotoGallery />*/}
