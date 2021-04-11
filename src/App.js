@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
-// import './Common/style.scss'
+import {DndProvider} from "react-dnd";
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import YupInputs from "./Components/YupInputs";
 import Hooks from "./Components/Hooks";
 import MapTest from "./Components/MapTest/MapTest";
@@ -14,6 +15,7 @@ import QrScanner from "./Components/QrScanner/QrScanner";
 import QrGenerator from "./Components/QrGenerator/QrGenerator";
 import InputForm from "./Components/Input/InputForm";
 import PhotoGallery from "./Components/PhotoGallery/PhotoGallery";
+import Dnd from "./Components/Dnd/Dnd";
 
 class App extends React.Component {
 
@@ -34,7 +36,10 @@ class App extends React.Component {
                 {/*<Print />*/}
                 {/*<QrGenerator />*/}
                 {/*<InputForm />*/}
-                <PhotoGallery />
+                <DndProvider backend={HTML5Backend}>
+                    <Dnd />
+                </DndProvider>
+                {/*<PhotoGallery />*/}
                 {/*<CameraPhoto />*/}
                 {/*<Search />*/}
                 {/*<QrScanner />*/}
