@@ -17,20 +17,27 @@ const TaskList = styled.div`
   padding: 12px;
 `;
 
-const Column = ({ column, tasks }) => {
+const Column = ({ column, tasks, ...props }) => {
+    // debugger
     return (
         <Container id={column.id}>
             <Title>{column.title}</Title>
             <Droppable droppableId={column.id}>
-                {(provided, snapshot) => (
-                    <TaskList ref={provided.innerRef} {...provided.droppableProps}>
-                        {tasks.map((t, i) => (
-                            <Task key={t.id} task={t} index={i} />
-                        ))}
-                        {provided.placeholder}
-                    </TaskList>
-                )}
+                {(provided, snapshot) => {
+
+                    return (
+                        <TaskList ref={provided.innerRef} {...provided.droppableProps}>
+                            {tasks.map((t, i) => {
+                                return (
+                                    <Task key={t.id} task={t} index={i}/>
+                                )
+                            })}
+                            {provided.placeholder}
+                        </TaskList>
+                    )
+                }}
             </Droppable>
+            <button onClick={props.handleSubmit}>submit</button>
         </Container>
     );
 };
