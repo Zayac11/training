@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import s from './Search.module.scss'
-import TypeChecker from 'typeco';
 
 const Search = (props) => {
 
@@ -49,7 +48,6 @@ const Search = (props) => {
     }
 
     const getMatchedList = (searchText, array) => {
-        if (TypeChecker.isEmpty(searchText)) return array;
         return array.filter(item => item.toLowerCase().includes(searchText.toLowerCase()));
     };
 

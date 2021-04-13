@@ -44,11 +44,11 @@ class App extends React.Component {
                 {/*    <Dnd />*/}
                 {/*</DndProvider>*/}
 
-                <BeautifulDnd />
+                {/*<BeautifulDnd />*/}
 
                 {/*<PhotoGallery />*/}
                 {/*<CameraPhoto />*/}
-                {/*<Search />*/}
+                <Search />
                 {/*<QrScanner />*/}
             </>
         )
