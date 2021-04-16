@@ -18,7 +18,7 @@ let initialState = {
     ],
     message: 'Это хуки, чекай',
 
-    isEmailTaken: true,
+    isEmailTaken: true
 
 }
 
