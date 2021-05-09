@@ -117,13 +117,49 @@
             }
 
             &__small {
-                height: 250px;
+                padding: 25px;
                 @media print {
                     width: 396px;
+                    height: 280.5px;
                     //height: 74.218mm;
                     //border: 1mm solid black;
-                    height: 280.5px;
                     border: 2px solid black;
+                    &__content {
+                        position: relative;
+                        width: 280px;
+                        margin: 0 auto;
+                        bottom: 57px;
+                        transform: rotate(90deg);
+                    }
+                    &__title {
+                        font-weight: 500;
+                        font-size: 18px;
+                        text-align: center;
+                        margin: 0 auto 14px;
+                    }
+                    &__imgContainer {
+                        margin-top: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    &__border {
+                        width: 220px;
+                        height: 220px;
+                    }
+                    &__image {
+                        //width: 195px;
+                        //height: 195px;
+                        position: absolute;
+                    }
+                    &__description {
+                        text-align: center;
+                        width: 235px;
+                        margin: 0 auto 25px;
+                        font-size: 12px;
+                        line-height: 1.67;
+                        color: rgba(0,0,0,0.4);
+                    }
                 }
 
                 &:nth-child(even) {
