@@ -9,14 +9,11 @@ const TicketItem = (props) => {
     const [sizeValue, setSizeValue] = useState(240)
 
     useEffect(()=> {
-        if(size === 'medium') {
-            setSizeValue(240)
-        }
-        else if (size === 'medium') {
+        if (size === 'medium') {
             setSizeValue(240)
         }
         else {
-            setSizeValue(240)
+            setSizeValue(170)
         }
     }, [size])
 
@@ -36,7 +33,7 @@ const TicketItem = (props) => {
                                     <QRCode
                                         className={`ticketItem__ticketLayout__${size}__image`}
                                         value={'https://vk.com/alexgeniusman'}
-                                        size={160}
+                                        size={sizeValue}
                                     />
                                 </div>
                             </div>

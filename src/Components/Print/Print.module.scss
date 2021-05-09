@@ -36,55 +36,32 @@
 
 .ticketItem {
     padding: 25px;
-    width: 396px;
-    height: 280.5px;
-
-    border: 1px solid black;
-    //padding: 10px;
-    //width: max-content;
+    width: 280px;
+    height: 396px;
     margin: 0 auto 20px;
+    border: 1px solid black;
 }
-
-.ticketImageContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content {
-    position: relative;
-    width: 280px;
-    margin: 0 auto;
-    bottom: 57px;
-    transform: rotate(90deg);
-}
-
 .title {
-    width: 280px;
-    font-weight: 500;
     font-size: 18px;
-    text-align: center;
-    margin: 0 auto 14px;
+    font-weight: 500;
+    margin-bottom: 15px;
 }
 .description {
-    text-align: center;
-    width: 235px;
-    margin: 0 auto 25px;
-    font-size: 12px;
-    line-height: 1.67;
     color: rgba(0,0,0,0.4);
+    font-size: 12px;
+
 }
-
-
+.ticketImageContainer {
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .border {
     width: 220px;
     height: 220px;
 }
-
 .qrcode {
-    width: 175px;
-    height: 175px;
     position: absolute;
-    z-index: 2;
 }

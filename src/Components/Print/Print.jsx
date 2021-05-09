@@ -5,6 +5,8 @@ import s from './Print.module.scss'
 import ComponentToPrint from './ComponentToPrint';
 import border from '../../assets/images/border.svg'
 
+let QRCode = require('qrcode.react')
+
 const Print = () => {
 
     const tickets = [
@@ -22,7 +24,7 @@ const Print = () => {
     ]
 
     const componentRef = useRef(null);
-    const [size, setSize] = useState('small')
+    const [size, setSize] = useState('large')
 
     return (
         <div>
@@ -40,7 +42,6 @@ const Print = () => {
                     tickets.map((t, index) => {
                         return (
                             <div className={s.ticketItem} key={index}>
-                                <div className={s.content}>
                                     <div className={s.title}>
                                         {t.title}
                                     </div>
@@ -49,9 +50,12 @@ const Print = () => {
                                     </p>
                                     <div className={s.ticketImageContainer}>
                                         <img className={s.border} src={border} alt="border"/>
-                                        <img className={s.qrcode} src="http://qrcoder.ru/code/?vk.com%2Falexgeniusman&6&0" width="198" height="198" border="0" title="QR код"/>
+                                        <QRCode
+                                            className={s.qrcode}
+                                            value={'https://vk.com/alexgeniusman'}
+                                            size={160}
+                                        />
                                     </div>
-                                </div>
                             </div>
                         )
                     })
