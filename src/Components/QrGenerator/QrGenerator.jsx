@@ -7,7 +7,7 @@ const QrGenerator = (props) => {
     return (
         <div className={s.container}>
             <QRCode
-                value={'https://vk.com/'}
+                value={'https://vk.com/alexgeniusman'}
                 size={500}
             />
         </div>

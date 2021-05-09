@@ -29,6 +29,10 @@ class App extends React.Component {
     render() {
         return (
             <>
+                <Print />
+                {/*<PhotoGallery />*/}
+                {/*<QrGenerator />*/}
+
                 {/*<YupInputs />*/}
                 {/*<Hooks />*/}
                 {/*<SignupForm />*/}
@@ -36,8 +40,6 @@ class App extends React.Component {
                 {/*<Wysiwyg />*/}
                 {/*<Test />*/}
                 {/*<MapTest />*/}
-                {/*<Print />*/}
-                {/*<QrGenerator />*/}
                 {/*<InputForm />*/}
 
                 {/*<DndProvider backend={ isMobile ? TouchBackend : HTML5Backend}>*/}
@@ -46,9 +48,8 @@ class App extends React.Component {
 
                 {/*<BeautifulDnd />*/}
 
-                {/*<PhotoGallery />*/}
                 {/*<CameraPhoto />*/}
-                <Search />
+                {/*<Search />*/}
                 {/*<QrScanner />*/}
             </>
         )
