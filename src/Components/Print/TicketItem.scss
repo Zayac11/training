@@ -73,6 +73,8 @@
                         position: absolute;
                     }
                     &__description {
+                        width: 310px;
+                        min-height: 72px;
                         font-size: 14px;
                         line-height: 1.71;
                         color: rgba(0,0,0,0.4);
@@ -148,13 +150,12 @@
                         height: 220px;
                     }
                     &__image {
-                        //width: 195px;
-                        //height: 195px;
                         position: absolute;
                     }
                     &__description {
                         text-align: center;
                         width: 235px;
+                        min-height: 60px;
                         margin: 0 auto 25px;
                         font-size: 12px;
                         line-height: 1.67;
