@@ -18,6 +18,7 @@ import PhotoGallery from './Components/PhotoGallery/PhotoGallery'
 import BeautifulDnd from './Components/BeautifulDnd/BeautifulDnd'
 import {Layout, Menu, Breadcrumb} from 'antd'
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import Burger from './Components/Burger/Burger'
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -71,6 +72,7 @@ class App extends React.Component {
                                         <Menu.Item key="12"><Link to='/input-form'>Input Form</Link></Menu.Item>
                                         <Menu.Item key="13"><Link to='/hooks'>Hooks</Link></Menu.Item>
                                         <Menu.Item key="14"><Link to='/search'>Search</Link></Menu.Item>
+                                        <Menu.Item key="15"><Link to='/burger'>Burger</Link></Menu.Item>
                                     </SubMenu>
                                 </Menu>
                             </Sider>
@@ -91,6 +93,7 @@ class App extends React.Component {
                                     <Route path='/input-form' render={() => <InputForm />} />
                                     <Route path='/hooks' render={() => <Hooks />} />
                                     <Route path='/search' render={() => <Search />} />
+                                    <Route path='/burger' render={() => <Burger />} />
                                 </Switch>
                             </Content>
                         </Layout>
