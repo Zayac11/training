@@ -6,7 +6,7 @@
 
 .container {
     border-radius: 56px;
-    width: 700px;
+    width: 100%;
     padding: 16px 120px 16px 20px;
     background: rgba(255,255,255,.2);
     cursor: pointer;
@@ -17,27 +17,34 @@
 }
 
 .inputContainer {
+    border-radius: 28px;
     position: relative;
 }
 
 .input {
-    border-radius: 28px 28px 0 0;
+    position: relative;
+    z-index: 20;
+    border-radius: 28px;
     outline: none;
     border: none;
-    width: 700px;
+    width: 100%;
     background: rgba(255,255,255,1);
     padding: 16px 120px 16px 20px;
 }
 
 .list {
-    border-radius: 0 0 28px 28px;
+    border-radius: 28px;
     background: rgba(255,255,255,1);
     position: absolute;
-    padding: 10px;
-    top: 45px;
+    padding: 43px 10px 10px;
+    top: 0;
     list-style: none;
     left: 0;
-    width: 700px;
+    width: 100%;
+}
+
+.listContainer {
+    margin-top: 5px;
 }
 
 .item {
