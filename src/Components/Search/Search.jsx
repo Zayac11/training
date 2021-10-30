@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import s from './Search.module.scss'
+import {DebounceInput} from 'react-debounce-input';
 
 const Search = (props) => {
 
@@ -55,7 +56,13 @@ const Search = (props) => {
     let textHighlighter;
     return (
         <div className={s.container}>
-            <input type="text" value={searchValue} onChange={(e) => handleChangeValue(e.target.value)} />
+            <DebounceInput
+                value={searchValue}
+                minLength={0}
+                type="text"
+                debounceTimeout={300}
+                onChange={(e) => handleChangeValue(e.target.value)} />
+            {/*<input type="text" value={searchValue} onChange={(e) => handleChangeValue(e.target.value)} />*/}
             <div>
                 {
                     // searchValue.length > 0 &&
@@ -65,7 +72,7 @@ const Search = (props) => {
                         if (searchKeywordIdx > -1) {
                             textHighlighter = [
                                 search.substring(0, searchKeywordIdx),
-                                <span style={{color: '#FFC618'}} key={index}>
+                                <span style={{fontWeight: 700}} key={index}>
                                     {search.substring(searchKeywordIdx, searchKeywordIdx + searchValue.length)}
                                 </span>,
                                 search.substring(searchKeywordIdx + searchValue.length)
