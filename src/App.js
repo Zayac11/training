@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import "antd/dist/antd.css";
+import 'antd/dist/antd.css'
 import {Link, Route, Switch} from 'react-router-dom'
 import YupInputs from './Components/YupInputs'
 import Hooks from './Components/Hooks'
@@ -16,10 +16,11 @@ import QrGenerator from './Components/QrGenerator/QrGenerator'
 import InputForm from './Components/Input/InputForm'
 import PhotoGallery from './Components/PhotoGallery/PhotoGallery'
 import BeautifulDnd from './Components/BeautifulDnd/BeautifulDnd'
-import {Layout, Menu, Breadcrumb} from 'antd'
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+import {Layout, Menu} from 'antd'
+import {LaptopOutlined, UserOutlined} from '@ant-design/icons'
 import Burger from './Components/Burger/Burger'
 import HookFormContainer from './Components/ReactHookForm/HookFormContainer'
+import SearchInput from './Components/SearchInput/SearchInput'
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -75,6 +76,7 @@ class App extends React.Component {
                                         <Menu.Item key="14"><Link to='/search'>Search</Link></Menu.Item>
                                         <Menu.Item key="15"><Link to='/burger'>Burger</Link></Menu.Item>
                                         <Menu.Item key="16"><Link to='/hook-form'>HookForm</Link></Menu.Item>
+                                        <Menu.Item key="17"><Link to='/input'>Search Input</Link></Menu.Item>
                                     </SubMenu>
                                 </Menu>
                             </Sider>
@@ -97,6 +99,7 @@ class App extends React.Component {
                                     <Route path='/search' render={() => <Search />} />
                                     <Route path='/burger' render={() => <Burger />} />
                                     <Route path='/hook-form' render={() => <HookFormContainer />} />
+                                    <Route path='/input' render={() => <SearchInput />} />
                                 </Switch>
                             </Content>
                         </Layout>

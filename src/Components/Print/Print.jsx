@@ -63,6 +63,7 @@ const Print = () => {
             </div>
 
             <ComponentToPrint size={size} tickets={tickets} ref={componentRef} />
+            <ComponentToPrint size={size} tickets={tickets} ref={componentRef} />
         </div>
     );
 };

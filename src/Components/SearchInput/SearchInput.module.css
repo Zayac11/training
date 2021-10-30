@@ -1,0 +1,53 @@
+.outer {
+    min-height: 600px;
+    padding: 30px;
+    background-color: #8d1190;
+}
+
+.container {
+    border-radius: 56px;
+    width: 700px;
+    padding: 16px 120px 16px 20px;
+    background: rgba(255,255,255,.2);
+    cursor: pointer;
+    transition: background .3s ease 0s;
+}
+.container:hover {
+    background: rgba(255,255,255,.5);
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.input {
+    border-radius: 28px 28px 0 0;
+    outline: none;
+    border: none;
+    width: 700px;
+    background: rgba(255,255,255,1);
+    padding: 16px 120px 16px 20px;
+}
+
+.list {
+    border-radius: 0 0 28px 28px;
+    background: rgba(255,255,255,1);
+    position: absolute;
+    padding: 10px;
+    top: 45px;
+    list-style: none;
+    left: 0;
+    width: 700px;
+}
+
+.item {
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background .3s ease 0s;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+.item:hover {
+    background-color: rgba(219, 222, 255, .3);
+}
