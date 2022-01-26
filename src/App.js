@@ -21,6 +21,7 @@ import {LaptopOutlined, UserOutlined} from '@ant-design/icons'
 import Burger from './Components/Burger/Burger'
 import HookFormContainer from './Components/ReactHookForm/HookFormContainer'
 import SearchInput from './Components/SearchInput/SearchInput'
+import SwiperPage from './Components/Swiper/SwiperPage'
 
 const { SubMenu } = Menu;
 const { Header, Content, Footer, Sider } = Layout;
@@ -64,6 +65,7 @@ class App extends React.Component {
                                         <Menu.Item key="4"><Link to='/beautiful-dnd'>Beautiful Dnd</Link></Menu.Item>
                                         <Menu.Item key="5"><Link to='/camera-photo'>Camera Photo</Link></Menu.Item>
                                         <Menu.Item key="6"><Link to='/qr-scanner'>Qr Scanner</Link></Menu.Item>
+                                        <Menu.Item key="7"><Link to='/swiper'>Swiper</Link></Menu.Item>
                                     </SubMenu>
                                     <SubMenu key="sub2" icon={<LaptopOutlined />} title="Sandbox">
                                         <Menu.Item key="7"><Link to='/yup-inputs'>YupInputs</Link></Menu.Item>
@@ -88,6 +90,7 @@ class App extends React.Component {
                                     <Route path='/beautiful-dnd' render={() => <BeautifulDnd />} />
                                     <Route path='/camera-photo' render={() => <CameraPhoto />} />
                                     <Route path='/qr-scanner' render={() => <QrScanner />} />
+                                    <Route path='/swiper' render={() => <SwiperPage />} />
 
                                     <Route path='/yup-inputs' render={() => <YupInputs />} />
                                     <Route path='/signup-form' render={() => <SignupForm />} />
