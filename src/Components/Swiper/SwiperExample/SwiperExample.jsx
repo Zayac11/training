@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import s from './SwiperExample.module.scss'
 import {NavLink} from 'react-router-dom'
 
-const SwiperExample = () => {
+const SwiperExample = ({number}) => {
+    useEffect(() => {
+        console.log({number})
+    }, [])
     return (
         <div className={s.container}>
             Swiper
