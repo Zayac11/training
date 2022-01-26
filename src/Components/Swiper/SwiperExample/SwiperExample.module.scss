@@ -1,4 +1,11 @@
 .container {
     background-color: #8d1190;
-    min-height: 1000px;
+    width: 240px;
+    height: 100%;
+    border-radius: 18px;
+    padding: 20px;
+
+    & button {
+        color: #000;
+    }
 }
